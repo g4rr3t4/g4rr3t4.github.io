@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://g4rr3t4.github.io/sitemap.xml
