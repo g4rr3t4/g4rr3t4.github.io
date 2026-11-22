@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>g4rr3t4 | Portafolio Personal</title>
+  <meta name="description" content="Portafolio personal de g4rr3t4. Desarrollador de software, soluciones web y proyectos tecnológicos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- Fondo con efecto de gradiente dinámico -->
+  <div class="background-glow glow-1"></div>
+  <div class="background-glow glow-2"></div>
+
+  <!-- Header y Navegación -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-bracket">&lt;</span>g4rr3t4<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">Sobre mí</a></li>
+          <li><a href="#skills" class="nav-link">Habilidades</a></li>
+          <li><a href="#projects" class="nav-link">Proyectos</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú móvil">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Disponible para nuevos proyectos</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hola, soy <span class="gradient-text">g4rr3t4</span>
+          </h1>
+          <p class="hero-subtitle">Desarrollador de Software & Creador Digital</p>
+          <p class="hero-description">
+            Diseñando y construyendo experiencias digitales modernas, eficientes y orientadas al usuario. Apasionado por la tecnología, el código limpio y la resolución de problemas.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              Ver Proyectos
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="https://github.com/g4rr3t4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              GitHub Perfil
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="code-card">
+            <div class="card-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="card-filename">developer.json</span>
+            </div>
+            <pre class="code-content"><code>{
+  <span class="key">"name"</span>: <span class="string">"g4rr3t4"</span>,
+  <span class="key">"role"</span>: <span class="string">"Full Stack Developer"</span>,
+  <span class="key">"status"</span>: <span class="string">"Building & Learning"</span>,
+  <span class="key">"skills"</span>: [
+    <span class="string">"JavaScript"</span>,
+    <span class="string">"Python"</span>,
+    <span class="string">"Web Development"</span>,
+    <span class="string">"Cloud & Git"</span>
+  ],
+  <span class="key">"openSource"</span>: <span class="boolean">true</span>
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Presentación</span>
+          <h2 class="section-title">Sobre mí</h2>
+          <p class="section-subtitle">Conoce un poco más acerca de mi trayectoria y enfoque de trabajo.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card feature-card">
+            <div class="card-icon">🚀</div>
+            <h3>Enfoque en Resultados</h3>
+            <p>Construcción de software funcional, escalable y mantenible con foco en la experiencia de usuario y el rendimiento.</p>
+          </div>
+          <div class="about-card feature-card">
+            <div class="card-icon">💡</div>
+            <h3>Aprendizaje Continuo</h3>
+            <p>Siempre experimentando con nuevas herramientas, arquitecturas modernas y mejores prácticas de desarrollo.</p>
+          </div>
+          <div class="about-card feature-card">
+            <div class="card-icon">🤝</div>
+            <h3>Colaboración Abierta</h3>
+            <p>Comprometido con la comunidad open source, el trabajo en equipo y la creación de soluciones accesibles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tecnologías</span>
+          <h2 class="section-title">Habilidades & Stack</h2>
+          <p class="section-subtitle">Herramientas y lenguajes que utilizo para dar vida a las ideas.</p>
+        </div>
+
+        <div class="skills-categories">
+          <!-- Frontend -->
+          <div class="skills-category-card">
+            <h3 class="category-title">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              Frontend
+            </h3>
+            <div class="tags-container">
+              <span class="tag">HTML5 / CSS3</span>
+              <span class="tag">JavaScript (ES6+)</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Responsive Design</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- Backend & Datos -->
+          <div class="skills-category-card">
+            <h3 class="category-title">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+              Backend & APIs
+            </h3>
+            <div class="tags-container">
+              <span class="tag">Node.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">JSON / Data Modeling</span>
+              <span class="tag">Bases de datos</span>
+            </div>
+          </div>
+
+          <!-- Herramientas & DevOps -->
+          <div class="skills-category-card">
+            <h3 class="category-title">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+              Herramientas
+            </h3>
+            <div class="tags-container">
+              <span class="tag">Git & GitHub</span>
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">Terminal & Bash</span>
+              <span class="tag">CI/CD Básico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Trabajos</span>
+          <h2 class="section-title">Proyectos Destacados</h2>
+          <p class="section-subtitle">Selección de proyectos en desarrollo y colaboraciones destacadas.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Proyecto 1 -->
+          <article class="project-card">
+            <div class="project-banner banner-1">
+              <span class="project-type">Web App</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Portafolio Personal Web</h3>
+              <p class="project-desc">
+                Sitio web de portafolio responsivo, rápido y elegante diseñado para presentar proyectos y habilidades con GitHub Pages.
+              </p>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>CSS3 Moderno</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/g4rr3t4/g4rr3t4.github.io" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  Código Fuente →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card">
+            <div class="project-banner banner-2">
+              <span class="project-type">API & Servicios</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">API REST & Automatizaciones</h3>
+              <p class="project-desc">
+                Servicios modulares para procesamiento de información, integración con APIs externas y tareas programadas.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Node.js</span>
+                <span>APIs</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/g4rr3t4" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  Ver en GitHub →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project-card">
+            <div class="project-banner banner-3">
+              <span class="project-type">Herramientas</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Utilidades y Scripts</h3>
+              <p class="project-desc">
+                Colección de scripts y utilidades para agilizar flujos de trabajo diarios, análisis de datos y configuración de entornos.
+              </p>
+              <div class="project-tags">
+                <span>Shell</span>
+                <span>Automatización</span>
+                <span>Git</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/g4rr3t4" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  Ver en GitHub →
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <span class="section-tag">Conectemos</span>
+          <h2 class="section-title">¿Tienes una idea o proyecto en mente?</h2>
+          <p class="contact-text">
+            Estoy abierto a nuevas oportunidades, proyectos interesantes y colaboraciones tecnológicas.
+          </p>
+
+          <div class="contact-actions">
+            <a href="mailto:g4rr3t4@outlook.es" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              Enviar Correo
+            </a>
+            <a href="https://github.com/g4rr3t4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Visitar mi GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>© <span id="currentYear"></span> g4rr3t4. Alojado con ❤️ en GitHub Pages.</p>
+      <div class="footer-links">
+        <a href="#hero">Subir ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
