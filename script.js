@@ -138,12 +138,12 @@ document.addEventListener('DOMContentLoaded', () => {
           const px = x * CELL_SIZE;
           const py = y * CELL_SIZE;
 
-          // Color pixel verde con suave brillo fósforo
-          ctx.fillStyle = 'rgba(34, 197, 94, 0.45)';
+          // Color pixel rojo sobre fondo #EFEFE7
+          ctx.fillStyle = 'rgba(220, 38, 38, 0.28)';
           ctx.fillRect(px, py, CELL_SIZE - 2, CELL_SIZE - 2);
 
-          // Núcleo más brillante
-          ctx.fillStyle = 'rgba(74, 222, 128, 0.7)';
+          // Núcleo rojo más visible
+          ctx.fillStyle = 'rgba(185, 28, 28, 0.55)';
           ctx.fillRect(px + 2, py + 2, CELL_SIZE - 6, CELL_SIZE - 6);
         }
       }
