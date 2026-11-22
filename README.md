@@ -1,26 +1,25 @@
-# Portafolio Personal - g4rr3t4 🚀
+# g4rr3t4 | Redes, Ciberseguridad & Electrónica 🌐🛡️⚡
 
-Bienvenido al repositorio de mi portafolio personal, alojado en vivo a través de **GitHub Pages**:
+Portafolio profesional y técnico de **g4rr3t4**, alojado y desplegado con **GitHub Pages**:
 
 👉 **[https://g4rr3t4.github.io](https://g4rr3t4.github.io)**
 
 ---
 
-## 💻 Tecnologías Utilizadas
+## 📌 Especialidades & Áreas de Enfoque
 
-- **HTML5 Semántico**: Estructura optimizada para accesibilidad y SEO.
-- **CSS3 Moderno**: Variables CSS personalizadas, soporte de tema oscuro / claro, diseño responsivo y efectos visuales modernos.
-- **JavaScript Vanilla**: Cambio dinámico de temas con persistencia en `localStorage` y menú responsivo.
-- **GitHub Pages**: Despliegue automatizado continuo y gratuito.
+- **🌐 Administración de Redes**: Diseño y configuración de topologías LAN/WAN, routing & switching (Cisco, Mikrotik), segmentación con VLANs, VPNs seguras (WireGuard, OpenVPN) y análisis de paquetes con Wireshark.
+- **🛡️ Ciberseguridad**: Seguridad perimetral y firewalls (pfSense, OPNsense), bastionado (hardening) de servidores Linux/Windows, análisis de vulnerabilidades, reglas de iptables y gestión de incidentes.
+- **⚡ Electrónica & Hardware IoT**: Microcontroladores (ESP32, STM32, Arduino), diseño y montaje de circuitos electrónicos, buses de comunicación (I2C, SPI, UART) y telemetría por MQTT.
 
 ---
 
-## 🌐 Estructura del Proyecto
+## 🚀 Estructura del Sitio
 
 ```text
-├── index.html       # Página principal del portafolio
-├── styles.css       # Estilos visuales y diseño responsivo
-├── script.js        # Lógica interactiva (Dark Mode, UI)
+├── index.html       # Landing page profesional
+├── styles.css       # Estilos Cyber-Dark / Light & diseño responsivo
+├── script.js        # Lógica interactiva (Modo oscuro, navegación)
 └── README.md        # Documentación del proyecto
 ```
 

@@ -3,323 +3,398 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>g4rr3t4 | Proyecto en Proceso</title>
-  <meta name="description" content="Portafolio personal de g4rr3t4 - Sitio web actualmente en desarrollo.">
+  <title>g4rr3t4 | Redes, Ciberseguridad & Electrónica</title>
+  <meta name="description" content="Portafolio profesional de g4rr3t4. Especialista en Administración de Redes, Ciberseguridad y Electrónica / Hardware.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #090d16;
-      --card-bg: rgba(17, 24, 39, 0.75);
-      --border: rgba(255, 255, 255, 0.08);
-      --text-main: #f9fafb;
-      --text-muted: #9ca3af;
-      --accent: #6366f1;
-      --accent-gradient: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
-      --glow-1: rgba(99, 102, 241, 0.2);
-      --glow-2: rgba(168, 85, 247, 0.15);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg);
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem 1.5rem;
-      position: relative;
-      overflow: hidden;
-      line-height: 1.6;
-    }
-
-    /* Luces ambientales de fondo */
-    .glow {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(120px);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .glow-1 {
-      width: 450px;
-      height: 450px;
-      top: -100px;
-      left: 10%;
-      background: var(--glow-1);
-    }
-
-    .glow-2 {
-      width: 500px;
-      height: 500px;
-      bottom: -150px;
-      right: 10%;
-      background: var(--glow-2);
-    }
-
-    /* Tarjeta Principal */
-    .card {
-      position: relative;
-      z-index: 1;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 3.5rem 2.5rem;
-      max-width: 580px;
-      width: 100%;
-      text-align: center;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
-      animation: fadeIn 0.8s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Logo */
-    .logo {
-      display: inline-block;
-      font-family: 'JetBrains Mono', monospace;
-      font-weight: 700;
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      letter-spacing: -0.5px;
-      color: #fff;
-    }
-
-    .logo span {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* Badge de estado */
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 6px 16px;
-      border-radius: 9999px;
-      background: rgba(99, 102, 241, 0.12);
-      border: 1px solid rgba(99, 102, 241, 0.3);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #a5b4fc;
-      margin-bottom: 1.75rem;
-    }
-
-    .pulsing-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background-color: #f59e0b;
-      box-shadow: 0 0 10px #f59e0b;
-      animation: pulse 1.8s infinite;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
-      70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(245, 158, 11, 0); }
-      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
-    }
-
-    /* Textos */
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      letter-spacing: -1px;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
-
-    .gradient-text {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      margin-bottom: 2.25rem;
-    }
-
-    /* Barra de Progreso */
-    .progress-box {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 2.25rem;
-      text-align: left;
-    }
-
-    .progress-header {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .progress-bar {
-      height: 8px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 9999px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .progress-fill {
-      width: 65%;
-      height: 100%;
-      background: var(--accent-gradient);
-      border-radius: 9999px;
-      animation: progressAnim 2s ease-in-out infinite alternate;
-    }
-
-    @keyframes progressAnim {
-      0% { width: 55%; }
-      100% { width: 75%; }
-    }
-
-    /* Botones y Enlaces */
-    .actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 22px;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.25s ease;
-    }
-
-    .btn-primary {
-      background: var(--accent-gradient);
-      color: #fff;
-      box-shadow: 0 4px 18px rgba(99, 102, 241, 0.35);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 22px rgba(99, 102, 241, 0.5);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border);
-      color: var(--text-main);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(99, 102, 241, 0.4);
-      transform: translateY(-2px);
-    }
-
-    /* Footer */
-    footer {
-      position: relative;
-      z-index: 1;
-      margin-top: 2.5rem;
-      color: rgba(255, 255, 255, 0.3);
-      font-size: 0.85rem;
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    @media (max-width: 640px) {
-      .card {
-        padding: 2.5rem 1.5rem;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      .actions {
-        flex-direction: column;
-      }
-      .btn {
-        width: 100%;
-        justify-content: center;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="glow glow-1"></div>
-  <div class="glow glow-2"></div>
+<body class="dark-theme">
+  <!-- Efectos de luz ambiental tecnológica -->
+  <div class="background-glow glow-1"></div>
+  <div class="background-glow glow-2"></div>
+  <div class="background-glow glow-3"></div>
 
-  <div class="card">
-    <div class="logo">
-      &lt;<span>g4rr3t4</span>/&gt;
-    </div>
-
-    <div class="badge">
-      <span class="pulsing-dot"></span>
-      <span>En desarrollo activo</span>
-    </div>
-
-    <h1>Proyecto en <span class="gradient-text">Proceso</span></h1>
-
-    <p>
-      Actualmente me encuentro construyendo mi nuevo portafolio y espacio web. Muy pronto estará disponible con todos mis proyectos y novedades.
-    </p>
-
-    <div class="progress-box">
-      <div class="progress-header">
-        <span>Estado del despliegue</span>
-        <span>En progreso...</span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-fill"></div>
-      </div>
-    </div>
-
-    <div class="actions">
-      <a href="https://github.com/g4rr3t4" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-        </svg>
-        Ver mi GitHub
+  <!-- Cabecera y Navegación -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-terminal">$</span> g4rr3t4<span class="cursor-blink">_</span>
       </a>
-      <a href="mailto:g4rr3t4@outlook.es" class="btn btn-secondary">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg>
-        Contactar por Correo
-      </a>
-    </div>
-  </div>
 
-  <footer>
-    © <span id="currentYear"></span> g4rr3t4 • Construido con GitHub Pages
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">Sobre mí</a></li>
+          <li><a href="#specialties" class="nav-link">Especialidades</a></li>
+          <li><a href="#skills" class="nav-link">Stack Técnico</a></li>
+          <li><a href="#projects" class="nav-link">Proyectos</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú móvil">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Sistemas Seguros & Hardware Operativo</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hola, soy <span class="gradient-text">g4rr3t4</span>
+          </h1>
+          <p class="hero-subtitle">
+            Administrador de Redes <span class="divider">|</span> Ciberseguridad <span class="divider">|</span> Electrónica
+          </p>
+          <p class="hero-description">
+            Especializado en el diseño y despliegue de infraestructuras de red seguras, bastionado de servidores, auditorías de seguridad y desarrollo de hardware embebido e IoT.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+              Ver Laboratorios & Proyectos
+            </a>
+            <a href="https://github.com/g4rr3t4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              GitHub Perfil
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">g4rr3t4@sec-node:~$</span>
+            </div>
+            <div class="terminal-body">
+              <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">whoami</span></div>
+              <div class="term-output">g4rr3t4 (NetAdmin / CyberSec / Hardware)</div>
+              
+              <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat /etc/specialties</span></div>
+              <div class="term-output text-cyan">[✓] Enrutamiento, VLANs & Firewalls</div>
+              <div class="term-output text-amber">[✓] Hardening, Pentesting & Seguridad</div>
+              <div class="term-output text-purple">[✓] Microcontroladores, Circuitos & IoT</div>
+
+              <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">netstat -tlpn</span></div>
+              <div class="term-output text-green">tcp  0.0.0.0:22  LISTEN (SSH Protected)</div>
+              <div class="term-output text-green">tcp  0.0.0.0:443 LISTEN (HTTPS Active)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pilares / Especialidades -->
+    <section class="section" id="specialties">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Áreas de Dominio</span>
+          <h2 class="section-title">Especialidades Técnicas</h2>
+          <p class="section-subtitle">Combinando la seguridad del software con la precisión de la infraestructura y el hardware.</p>
+        </div>
+
+        <div class="specialties-grid">
+          <!-- Pilar 1: Redes -->
+          <div class="feature-card">
+            <div class="card-badge badge-blue">Infraestructura</div>
+            <div class="card-icon">🌐</div>
+            <h3>Administración de Redes</h3>
+            <p>
+              Configuración y gestión de arquitecturas de red empresariales: conmutación, enrutamiento, segmentación mediante VLANs, VPNs seguras y monitorización de tráfico continuo.
+            </p>
+            <ul class="feature-list">
+              <li>Diseño de topologías LAN/WAN</li>
+              <li>Routers & Switches (Cisco, Mikrotik)</li>
+              <li>Protocolos TCP/IP, OSPF, BGP, DNS, DHCP</li>
+              <li>VPNs (WireGuard, OpenVPN, IPsec)</li>
+            </ul>
+          </div>
+
+          <!-- Pilar 2: Ciberseguridad -->
+          <div class="feature-card">
+            <div class="card-badge badge-amber">Protección</div>
+            <div class="card-icon">🛡️</div>
+            <h3>Ciberseguridad</h3>
+            <p>
+              Blindaje de entornos y análisis de vulnerabilidades para proteger activos contra accesos no autorizados e incidentes de seguridad digital.
+            </p>
+            <ul class="feature-list">
+              <li>Firewalls perimetrales (pfSense, OPNsense)</li>
+              <li>Hardening de servidores Linux y Windows</li>
+              <li>Análisis de vulnerabilidades & Nmap / Wireshark</li>
+              <li>Políticas de acceso y gestión de logs (SIEM)</li>
+            </ul>
+          </div>
+
+          <!-- Pilar 3: Electrónica -->
+          <div class="feature-card">
+            <div class="card-badge badge-purple">Hardware</div>
+            <div class="card-icon">⚡</div>
+            <h3>Electrónica & IoT</h3>
+            <p>
+              Diseño de circuitos electrónicos, prototipado de dispositivos embebidos y conexión de sensores al mundo digital mediante protocolos de telemetría.
+            </p>
+            <ul class="feature-list">
+              <li>Microcontroladores (ESP32, STM32, Arduino)</li>
+              <li>Protocolos IoT: MQTT, HTTP, I2C, SPI, UART</li>
+              <li>Diseño, montaje y diagnóstico de placas PCB</li>
+              <li>Manejo de instrumental: Osciloscopio, Multímetro</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades y Stack Técnico -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Herramientas & Protocolos</span>
+          <h2 class="section-title">Stack Técnico</h2>
+          <p class="section-subtitle">Tecnologías y herramientas que utilizo en laboratorios y entornos productivos.</p>
+        </div>
+
+        <div class="skills-categories">
+          <!-- Categoría 1 -->
+          <div class="skills-category-card">
+            <h3 class="category-title">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              Redes & Conectividad
+            </h3>
+            <div class="tags-container">
+              <span class="tag">Cisco IOS</span>
+              <span class="tag">Mikrotik RouterOS</span>
+              <span class="tag">VLANs / 802.1Q</span>
+              <span class="tag">Routing (OSPF / Estático)</span>
+              <span class="tag">WireGuard / OpenVPN</span>
+              <span class="tag">Wireshark</span>
+              <span class="tag">QoS & Traffic Shaping</span>
+            </div>
+          </div>
+
+          <!-- Categoría 2 -->
+          <div class="skills-category-card">
+            <h3 class="category-title">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              Seguridad & Sistemas
+            </h3>
+            <div class="tags-container">
+              <span class="tag">Linux (Debian / Kali / Ubuntu)</span>
+              <span class="tag">pfSense / OPNsense</span>
+              <span class="tag">iptables / UFW</span>
+              <span class="tag">Nmap / Reconocimiento</span>
+              <span class="tag">SSH Hardening</span>
+              <span class="tag">Fail2ban</span>
+              <span class="tag">Auditoría de Vulnerabilidades</span>
+            </div>
+          </div>
+
+          <!-- Categoría 3 -->
+          <div class="skills-category-card">
+            <h3 class="category-title">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              Electrónica & Embebidos
+            </h3>
+            <div class="tags-container">
+              <span class="tag">ESP32 (Wi-Fi / BLE)</span>
+              <span class="tag">Arduino & Microcontroladores</span>
+              <span class="tag">Raspberry Pi</span>
+              <span class="tag">MQTT & Telemetría IoT</span>
+              <span class="tag">I2C / SPI / UART</span>
+              <span class="tag">Diseño de Circuitos</span>
+              <span class="tag">Soldadura & Diagnóstico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos y Laboratorios -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Casos Prácticos</span>
+          <h2 class="section-title">Laboratorios & Proyectos</h2>
+          <p class="section-subtitle">Implementaciones reales de infraestructura, seguridad perimetral y hardware.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Proyecto 1 -->
+          <article class="project-card">
+            <div class="project-banner banner-net">
+              <span class="project-type">Redes & Firewall</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Infraestructura de Red Segmentada con pfSense</h3>
+              <p class="project-desc">
+                Despliegue y configuración de un firewall perimetral con segmentación en VLANs aisladas (Servidores, Clientes, Gestión e IoT), reglas de filtrado granular y túnel VPN para acceso remoto seguro.
+              </p>
+              <div class="project-tags">
+                <span>pfSense</span>
+                <span>VLANs</span>
+                <span>WireGuard</span>
+                <span>SNORT/Suricata</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/g4rr3t4" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  Detalles del Laboratorio →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card">
+            <div class="project-banner banner-sec">
+              <span class="project-type">Ciberseguridad</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Hardening y Auditoría de Servidores Linux</h3>
+              <p class="project-desc">
+                Bastionado integral de sistemas operativos Linux: cierre de puertos innecesarios, restricción de acceso SSH mediante claves ed25519, protección contra ataques de fuerza bruta con Fail2ban y monitoreo de integridad.
+              </p>
+              <div class="project-tags">
+                <span>Linux Security</span>
+                <span>IPTables</span>
+                <span>Fail2ban</span>
+                <span>Auditoría</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/g4rr3t4" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  Guía de Bastionado →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project-card">
+            <div class="project-banner banner-elec">
+              <span class="project-type">Electrónica & IoT</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Monitor de Entorno & Red con ESP32 & MQTT</h3>
+              <p class="project-desc">
+                Dispositivo de hardware embebido basado en ESP32 para monitorización de parámetros físicos y estado de conectividad en red local, enviando métricas cifradas a través de broker MQTT.
+              </p>
+              <div class="project-tags">
+                <span>ESP32</span>
+                <span>C / C++</span>
+                <span>MQTT</span>
+                <span>Hardware IoT</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/g4rr3t4" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  Esquema y Código →
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Mí detallado -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-wrapper">
+          <div class="section-header text-left">
+            <span class="section-tag">Perfil Profesional</span>
+            <h2 class="section-title">Sobre mí</h2>
+          </div>
+          <div class="about-text-content">
+            <p>
+              Soy un apasionado de la tecnología con un enfoque multidisciplinar que abarca desde los componentes físicos y circuitos de hardware hasta los protocolos de enrutamiento y la seguridad informática defensiva.
+            </p>
+            <p>
+              Mi objetivo es diseñar infraestructuras robustas, confiables y blindadas frente a amenazas, complementando la parte lógica con el conocimiento profundo de la capa física y los sistemas embebidos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <span class="section-tag">Contacto Profesional</span>
+          <h2 class="section-title">¿Hablamos sobre un proyecto o auditoría?</h2>
+          <p class="contact-text">
+            Si estás buscando colaboración en infraestructura de redes, proyectos de ciberseguridad o desarrollo de hardware electrónico, estaré encantado de conectar.
+          </p>
+
+          <div class="contact-actions">
+            <a href="mailto:g4rr3t4@outlook.es" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              g4rr3t4@outlook.es
+            </a>
+            <a href="https://github.com/g4rr3t4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              GitHub Perfil
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>© <span id="currentYear"></span> g4rr3t4. Redes · Ciberseguridad · Electrónica.</p>
+      <div class="footer-links">
+        <a href="#hero">Inicio ↑</a>
+      </div>
+    </div>
   </footer>
 
-  <script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
